@@ -706,7 +706,7 @@ $.imgAreaSelect = function (img, options) {
         setSelection(selX(x1), selY(y1), selX(x1), selY(y1));
         
         /* If this is an API call, callback functions should not be triggered */
-        if (!this instanceof $.imgAreaSelect) {
+        if (! (this instanceof $.imgAreaSelect) ) {
             options.onSelectChange(img, getSelection());
             options.onSelectEnd(img, getSelection());
         }
